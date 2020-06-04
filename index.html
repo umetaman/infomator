@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>Infomator</title>
+</head>
+<body>
+    <header id="header">
+        <section id="date_container">
+            <p id="date">
+                <span id="year" class="date">2020</span>
+                <span id="year_separator" class="date-separators">年</span>
+                <span id="month" class="date">00</span>
+                <span id="month_separator" class="date-separators">月</span>
+                <span id="day" class="date">00</span>
+                <span id="day_separator" class="date-separators">日</span>
+                <span id="weekday" class="date">(月)</span>
+            </p>
+        </section>
+        <section id="datetime_container">
+            <p id="datetime">
+                <span id="hour" class="datetime">00</span>
+                <span id="hour_separator" class="time-separator">:</span>
+                <span id="minute" class="datetime">00</span>
+                <span id="minute_separator" class="time-separator">:</span>
+                <span id="second" class="datetime">00</span>
+            </p>
+        </section>
+    </header>
+    
+    <main id="main">
+        <section id="info_container">
+            <div id="news_container">
+                <h1 id="news_title">This is the news title.</h1>
+                <p id="news_category">Technology</p>
+                <marquee id="news_description" behavior="scroll">
+                    This is the news description. This is the news description.
+                </marquee>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <!-- blank -->
+    </footer>
+
+    <button id="close_button" class="buttons">X</button>
+</body>
+</html>

@@ -1,0 +1,52 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 12px;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.25rem;
+}
+
+header#header {
+  background-color: #ffaaaa;
+}
+
+#date_container #date > .date-separators {
+  font-size: 0.9rem;
+}
+
+main#main {
+  background-color: #aaffaa;
+}
+
+#info_container #news_container #news_category {
+  display: inline-block;
+  background-color: yellow;
+  padding: 1px 5px;
+  border-radius: 8px;
+  width: auto;
+}
+
+footer#footer {
+  background-color: #aaaaff;
+  height: 12px;
+}
+
+button#close_button {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+/*# sourceMappingURL=main.css.map */
