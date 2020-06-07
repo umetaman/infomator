@@ -1,0 +1,33 @@
+{
+  "name": "infomator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -w",
+    "build": "webpack",
+    "start": "webpack && electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umetaman/infomator.git"
+  },
+  "author": "umetaman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umetaman/infomator/issues"
+  },
+  "homepage": "https://github.com/umetaman/infomator#readme",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@electron/typescript-definitions": "^8.7.4",
+    "electron": "^9.0.2"
+  }
+}
