@@ -7,9 +7,7 @@ window.onload = () => {
     renderMain.StartClock();
 
     const newsAgent: NewsAgent = new NewsAgent();
-    newsAgent.GetHeadlines((headlines) => {
-        const first = headlines[0];
 
-        renderMain.SetNewsContent(first.Title, [], first.Title);
-    });
+    newsAgent.HeadlineSetter = (news) => renderMain.SetNewsContent(news.Title, [], news.Title);
+    newsAgent.StartLoop();
 };

@@ -12,6 +12,9 @@ html, body{
     padding: 0;
     margin: 0;
     width: 100%;
+
+    // スクロール禁止
+    overflow: hidden;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -41,15 +44,45 @@ main#main{
     background-color: #aaffaa;
 }
 
+// marquee-animation
+h1#news_title{
+    animation-name: marquee;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+}
+
+@keyframes marquee{
+    from{
+        transform: translate(0);
+    }
+
+    to{
+        transform: translate(-100%);
+    }
+}
+
 #info_container{
     #news_container{
 
-        #news_category{
-            display: inline-block;
+        // リンクボタン
+        #link_btn_container{
+            text-align: right;
+        }
+
+        #open_link_btn{
             background-color: yellow;
             padding: 1px 5px;
             border-radius: 8px;
             width: auto;
+        }
+
+        #open_link_btn:focus{
+            outline: 0;
         }
     }
 }

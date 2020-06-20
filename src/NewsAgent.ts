@@ -10,6 +10,9 @@ export interface HeadlineCallback{
 export class NewsAgent{
 
     private request: XMLHttpRequest;
+    private headlines: NewsHeadline[];
+    private index: number = 0;
+    public HeadlineSetter: (news: NewsHeadline) => void;
     
     constructor(){
         this.request = new XMLHttpRequest();
@@ -46,9 +49,30 @@ export class NewsAgent{
                 }
 
                 onComplete(headlines);
+                this.headlines = headlines;
             }
         }
 
         this.request.send(null);
+    }
+
+    public StartLoop(): void{
+        console.log("Start headline loop.");
+
+        this.GetHeadlines((headlines) => { });
+        let loop = setInterval(() => this.updateNews(this.HeadlineSetter), 30000);
+    }
+
+    private updateNews(setter: (news: NewsHeadline) => void): void{
+        console.log("Update news headline.");
+        console.log(this.headlines[this.index]);
+
+        setter(this.headlines[this.index]);
+        this.index++;
+
+        if(this.index > this.headlines.length){
+            this.GetHeadlines((headlines) => { });
+            this.index = 0;
+        }
     }
 }

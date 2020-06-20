@@ -20,14 +20,22 @@ class AppMain{
 
     private create(){
         this.window = new BrowserWindow({
-            width: 500,
-            height: 500,
+            width: 300,
+            height: 100,
             minWidth: 300,
-            minHeight: 300
+            minHeight: 100,
+            maxWidth: 300,
+            maxHeight: 100,
+            frame: false,
+            hasShadow: false,
+            useContentSize: true,
+            x: 0, 
+            y: 0,
+            alwaysOnTop: true
         });
 
         this.window.loadURL(this.mainUrl);
-        this.window.openDevTools();
+        // this.window.openDevTools();
 
         this.window.on("closed", () => {
             this.window = null;
