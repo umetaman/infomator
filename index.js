@@ -13,22 +13,25 @@ var AppMain = /** @class */ (function () {
     };
     AppMain.prototype.create = function () {
         var _this = this;
+        // const display = screen.getPrimaryDisplay();
+        var WIDTH = 300;
+        var HEIGHT = 100;
         this.window = new BrowserWindow({
-            width: 300,
-            height: 100,
-            // minWidth: 300,
-            // minHeight: 100,
-            // maxWidth: 300,
-            // maxHeight: 100,
+            width: WIDTH,
+            height: HEIGHT,
+            minWidth: WIDTH,
+            minHeight: HEIGHT,
+            maxWidth: WIDTH,
+            maxHeight: HEIGHT,
             frame: false,
             hasShadow: false,
             useContentSize: true,
             x: 0,
             y: 0,
-            alwaysOnTop: true
+            alwaysOnTop: false
         });
         this.window.loadURL(this.mainUrl);
-        this.window.openDevTools();
+        // this.window.openDevTools();
         this.window.on("closed", function () {
             _this.window = null;
         });
