@@ -1,4 +1,4 @@
-const { app, BrowserWindow, App } = require("electron");
+const { app, BrowserWindow, App, screen } = require("electron");
 
 class AppMain{
     
@@ -19,23 +19,27 @@ class AppMain{
     }
 
     private create(){
+        const display = screen.getPrimaryDisplay();
+        const WIDTH: number = 300;
+        const HEIGHT: number = 100;
+
         this.window = new BrowserWindow({
-            width: 300,
-            height: 100,
-            minWidth: 300,
-            minHeight: 100,
-            maxWidth: 300,
-            maxHeight: 100,
+            width: WIDTH,
+            height: HEIGHT,
+            minWidth: WIDTH,
+            minHeight: HEIGHT,
+            maxWidth: WIDTH,
+            maxHeight: HEIGHT,
             frame: false,
             hasShadow: false,
             useContentSize: true,
-            x: 0, 
-            y: 0,
-            alwaysOnTop: true
+            x: display.bounds.width - WIDTH, 
+            y: display.bounds.height - HEIGHT,
+            alwaysOnTop: false
         });
 
         this.window.loadURL(this.mainUrl);
-        // this.window.openDevTools();
+        this.window.openDevTools();
 
         this.window.on("closed", () => {
             this.window = null;

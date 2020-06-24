@@ -1,5 +1,5 @@
 import { RenderMain } from "./RenderMain";
-import { NewsAgent } from "./NewsAgent";
+import { NewsAgent, NewsHeadline } from "./NewsAgent";
 
 window.onload = () => {
     const renderMain: RenderMain = new RenderMain();

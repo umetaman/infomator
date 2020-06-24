@@ -16,10 +16,10 @@ var AppMain = /** @class */ (function () {
         this.window = new BrowserWindow({
             width: 300,
             height: 100,
-            minWidth: 300,
-            minHeight: 100,
-            maxWidth: 300,
-            maxHeight: 100,
+            // minWidth: 300,
+            // minHeight: 100,
+            // maxWidth: 300,
+            // maxHeight: 100,
             frame: false,
             hasShadow: false,
             useContentSize: true,
@@ -28,7 +28,7 @@ var AppMain = /** @class */ (function () {
             alwaysOnTop: true
         });
         this.window.loadURL(this.mainUrl);
-        // this.window.openDevTools();
+        this.window.openDevTools();
         this.window.on("closed", function () {
             _this.window = null;
         });
