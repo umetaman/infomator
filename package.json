@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "@electron/typescript-definitions": "^8.7.4",
-    "electron": "^9.0.2"
+    "electron": "^9.3.1"
   }
 }
